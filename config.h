@@ -1,0 +1,34 @@
+/*
+ * config.h
+ *
+ *  Created on: 29 gru 2016
+ *      Author: Luke
+ */
+
+#ifndef CONFIG_H_
+#define CONFIG_H_
+
+#define VESC_1_ID 1
+#define VESC_2_ID 2
+#define DUC_ID 3
+#define CU_ID 4
+
+#define BM_BATTERY_CELLS_COUNT 6
+#define BM_MIN_BATTERY_CELL_VOLTAGE 3.0
+#define BM_MAX_BATTERY_CELL_VOLTAGE 4.3
+#define BM_MIN_BATTERY_VOLTAGE (BM_BATTERY_CELLS_COUNT * BM_MIN_BATTERY_CELL_VOLTAGE)
+
+#define AM_ADC_MAX_VALUE 4096
+#define AM_ADC_REF_VOLTAGE 3.3
+#define AM_FIRST_CHANNEL_NUMBER 6
+#define AM_CHANNELS_COUNT 1
+#define AM_SAMPLES_COUNT 4
+
+#define TM_MOSFET_TEMP_CHANNEL 6
+
+#define LIGHTS_BRAKING_PWM 200
+#define LIGHTS_DEFAULT_PWM 50
+#define LIGHTS_DEFAULT_MODE 2
+#define LIGHTS_DEFAULT_REACT_TO_BRAKING 1
+
+#endif /* CONFIG_H_ */
