@@ -97,6 +97,12 @@ LightsManagerData lm_getData(void)
   data.blinkingMode = LIGHTS_DEFAULT_MODE;
   data.brightness = LIGHTS_DEFAULT_PWM;
   data.reactToBraking = LIGHTS_DEFAULT_REACT_TO_BRAKING;
+  data.braking = 0;
+  if(lm_data.blinkingMode < BLINKING_PATTERNS_COUNT) {
+    uint8_t mode = data.blinkingMode;
+    data.timeOn = blinkingPatterns[mode].timeOn;
+    data.timeOff = blinkingPatterns[mode].timeOff;
+  }
   int i = 0;
   for(i = 0; i < 5; i++) {
     if(chMtxTryLock(&lm_dataMutex)) {
